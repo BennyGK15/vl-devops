@@ -1,3 +1,5 @@
+LABEL maintainer="Benjamin Esenwein inf20074@lehre.dhbw-stuttgart.de"
+
 FROM python:3.9.2
 
 EXPOSE 5000
