@@ -1,4 +1,5 @@
 LABEL maintainer="Benjamin Esenwein inf20074@lehre.dhbw-stuttgart.de"
+LABEL description="This is a Python Project as a web application powered by flask"
 
 FROM python:3.9.2
 
