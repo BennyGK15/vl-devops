@@ -1,4 +1,4 @@
-FROM python:3.9.2
+FROM python:3.9
 
 LABEL maintainer="Benjamin Esenwein inf20074@lehre.dhbw-stuttgart.de"
 LABEL description="This is a Python Project as a web application powered by flask"
@@ -8,7 +8,7 @@ EXPOSE 5000
 ENV PYTHONDONTWRITEBYTECODE=1
 
 COPY requirements.txt .
-RUN python -m pip install requirements.txt
+RUN python -m pip install -r requirements.txt
 
 WORKDIR /app
 COPY . /app
