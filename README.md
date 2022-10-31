@@ -11,3 +11,11 @@
 
 optionally the attribute '-p' can be added to set the application port (by default 5000:5000 is recommended)
 
+---
+
+Running in VirtualBox
+- you have to install VirtualBox
+- you have to install vagrant
+
+## start generating a virtualbox image with vagrant
+```vagrant up```
