@@ -7,7 +7,7 @@
 
   tasks:
   - name: search for updates on client
-    ansible.builtin.apt:
+    ansible.builtin.apt: # spezifische Paketangabe, weil es mehrere gleiche Bezeichnungen geben kann
       name: apt-get update
       update_cache: true
   - name: install updates for client
