@@ -20,3 +20,13 @@ optionally the attribute '-p' can be added to set the application port (by defau
 
 ## start generating a virtualbox image with vagrant
 Shell: ```vagrant up```
+
+---
+# Deploy application in Azure via Terraform-Script
+- make sure you have azure cli installed and you are logged in
+- change configuration in main.tf and variables.tf with your own property values
+
+## start deployment
+Shell:  ```terraform validate```
+        ```terraform plan```
+        ```terraform apply``` - apply with 'yes'
