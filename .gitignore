@@ -132,3 +132,6 @@ dmypy.json
 # vagrant
 .vagrant
 .vagrant.d
+
+# terraform
+.terraform
