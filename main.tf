@@ -14,7 +14,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "rg-dhbw-devops" { # drauf referenzierbar
     name = "rg-dhbw-devops" # Ressourcen-Name
-    location = "eastus2" # wo die Ressource sein soll
+    location = var.region # wo die Ressource sein soll
 }
 
 resource "azurerm_service_plan" "app-service-plan" { # Name des Skriptes
