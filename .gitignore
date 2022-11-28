@@ -138,3 +138,6 @@ dmypy.json
 .terraform.*
 terraform.tfstate
 terraform.tfstate.*
+
+# testing
+.scannerwork
