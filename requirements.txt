@@ -1,1 +1,4 @@
 Flask==2.0.2
+# Packages for Python Pytest
+pytest==7.2.0
+Werkzeug==2.0.3
