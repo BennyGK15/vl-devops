@@ -37,3 +37,7 @@ Shell:  ''```terraform plan```''
 Shell:  ''```terraform apply```'' - apply with 'yes'
 
 ### Note: the regions variable can be found in variables.tf
+
+---
+## pytest
+Shell: ''```python -m pytest -v```''
