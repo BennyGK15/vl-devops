@@ -26,7 +26,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/<docker_repository>:latest,${{ secrets.DOCKER_HUB_USERNAME }}/<docker_repository>:${{ github.sha }}
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/devops-python-flask-webapp:latest,${{ secrets.DOCKER_HUB_USERNAME }}/devops-python-flask-webapp:${{ github.sha }}
 
   deploy:
     runs-on: ubuntu-latest
@@ -42,4 +42,4 @@ jobs:
           app-name: '<webapp_name>'
           slot-name: 'production'
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          images: ${{ secrets.DOCKER_HUB_USERNAME }}/<docker_repository>:${{ github.sha }}
+          images: ${{ secrets.DOCKER_HUB_USERNAME }}/devops-python-flask-webapp:${{ github.sha }}
