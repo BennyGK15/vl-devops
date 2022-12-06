@@ -1,6 +1,6 @@
 name: Python build and test
 
-on:
+on: # should be triggered on push and pull requests
   push:
     branches: ["master"]
   pull_request:
@@ -22,6 +22,6 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test with pytest
-      run:
+      run: # run pytest - 'pytest' does not work alone - python commands should be added as seen
         python -m pytest -v
       
