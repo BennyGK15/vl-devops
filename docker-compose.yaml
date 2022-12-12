@@ -21,7 +21,7 @@ services:
     volumes:
       - ./grafana/config.ini:/etc/grafana/grafana.ini
       - ./grafana/datasource.yaml:/etc/grafana/provisioning/datasources/default.yaml
-      - ./grafana/datasource.yaml:/etc/grafana/provisioning/dashboards/default.yaml
+      - ./grafana/dashboard.yaml:/etc/grafana/provisioning/dashboards/default.yaml
       - ./grafana/dashboards:/var/lib/grafana/dashboards
     ports: # port mapping - available at default port 3000
       - 3000:3000
