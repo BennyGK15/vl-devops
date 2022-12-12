@@ -7,7 +7,7 @@ services:
       dockerfile: ./Dockerfile
     ports:
       - 5000:5000
-  prometheus:
+  prometheus: # configure prometheus service
     container_name: prometheus
     image: prom/prometheus:latest
     ports:
@@ -16,3 +16,14 @@ services:
       - ./prometheus/config.yml:/etc/prometheus/prometheus.yml
     depends_on: # dependency on app - app is started first, then prometheus
       - app
+  grafana: # configure grafana service
+    image: grafana/grafana:latest
+    volumes:
+      - ./grafana/config.ini:/etc/grafana/grafana.ini
+      - ./grafana/datasource.yaml:/etc/grafana/provisioning/datasources/default.yaml
+      - ./grafana/datasource.yaml:/etc/grafana/provisioning/dashboards/default.yaml
+      - ./grafana/dashboards:/var/lib/grafana/dashboards
+    ports:
+      - 3000:3000
+    depends_on:
+      - prometheus
