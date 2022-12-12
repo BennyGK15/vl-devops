@@ -12,7 +12,7 @@ services:
     image: prom/prometheus:latest
     ports:
       - 9090:9090
-    volumes:
+    volumes: # should go in the path /etc/prometheus/
       - ./prometheus/config.yml:/etc/prometheus/prometheus.yml
-    depends_on:
+    depends_on: # dependency on app - app is started first, then prometheus
       - app
