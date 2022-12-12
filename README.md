@@ -1,6 +1,6 @@
 # How to run this docker-project
 
-## push file from docker-hub
+## pull file from docker-hub
 ```docker pull benesenwein/devops-python-flask-webapp:latest```
 
 ## create docker container
@@ -41,3 +41,7 @@ Shell:  ''```terraform apply```'' - apply with 'yes'
 ---
 ## pytest
 Shell: ''```python -m pytest -v```''
+
+---
+# If you want to have a correct code higlighting in the local code editor make sure to run the following command to install the packages:
+Shell: ''```pip install -r .\requirements.txt```''
