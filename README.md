@@ -1,3 +1,18 @@
+<span style="font-size: 12px;">  
+  
+  *This DevOps Project was developed on a Windows 10 machine.*  
+  
+  *Ansible config and / or related files could have some mistakes.*  
+  
+  *DHBW Lecturer: R. Lieb*  
+  
+  *Course: TINF20C*  
+  
+  *Year: 2022*  
+  
+</span>
+---
+
 # How to run this docker-project
 
 ## pull file from docker-hub
