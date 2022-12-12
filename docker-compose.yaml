@@ -1,9 +1,18 @@
 version: '3'
 
 services:
-  python-flask-webapp:
+  app: # renamed on 12-12-2022 (old name: python-flask-webapp)
     build:
       context: .
       dockerfile: ./Dockerfile
     ports:
       - 5000:5000
+  prometheus:
+    container_name: prometheus
+    image: prom/prometheus:latest
+    ports:
+      - 9090:9090
+    volumes:
+      - ./prometheus/config.yml:/etc/prometheus/prometheus.yml
+    depends_on:
+      - app
