@@ -2,3 +2,5 @@ Flask==2.0.2
 # Packages for Python Pytest & functional tests
 pytest==7.2.0
 Werkzeug==2.0.3
+# Packages for monitoring
+prometheus-flask-exporter==0.21.0
